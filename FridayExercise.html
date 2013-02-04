@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<meta charset="utf-8" />
+
+<title> Untitled </title>
+
+<script type="text/javascript">
+
+var ClassGrade = [
+	["Don", 80],
+	["Marry", 85],
+	["John", 90],
+	["Jill", 95],
+	["James", 75],
+	["Windle", 85],
+	["Steven", 100],
+	["Dave", 96],
+	["Phillips", 89],
+    ["Jacob", 78]
+];
+
+function AvgCalc(number) {
+	   var totalPoint = 0;
+	for (var i = 0; i < number.length; i++ ) {
+ 
+        totalPoint += number[i][1];
+	}
+    var gradeAvg = (totalPoint/number.length);
+    return gradeAvg; 
+}
+
+var ClassAvg = AvgCalc(ClassGrade);
+
+document.write("Average Grade:" + " " + ClassAvg + "<br>");
+
+function LetterGrade (average) {
+	var letter;
+	if (average >= 90) {
+		letter = "A";
+	}	
+		else if (average >=80) {
+			letter = "B";
+		}
+		
+		else if (average >=70) {
+			letter = "C";
+		}
+
+		else if (average >=65) {
+			letter = "D";
+		}
+
+		else {
+			lettr = "F";
+		}
+return letter
+}
+
+document.write ("Letter Grade:" + " " + LetterGrade(ClassAvg));   
+
+</script>
+
+ 
+</head>
+
+<body>
+
+</body>
+
+</html>
+
